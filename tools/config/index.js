@@ -1,0 +1,38 @@
+'use strict';
+const config={
+    detail:{
+        desc:"配置详细信息",
+        publicVersion:{
+            desc:"版本发布管理"
+        },
+        version:{
+            desc:"显示版本信息"
+        },
+        help:{
+            desc:"显示使用方法"
+        },
+        template:{
+            desc:"模板管理"
+        },
+        excelToJson:{
+            desc:"excel,json互转"
+        },
+        dataDeal:{
+            desc:'数据处理'
+        }
+    },
+    sum:{
+        desc:"配置信息汇总",
+        command:["version","help","template","publicVersion","excelToJson","dataDeal"]
+    },
+    simpled:{
+        desc:"命令简写",
+        H:"help",
+        PV:"publicVersion",
+        V:"version",
+        temp:"template"
+    }
+};
+module.exports={
+    config
+}

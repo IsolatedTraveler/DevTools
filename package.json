@@ -1,0 +1,37 @@
+{
+  "name": "learn_npm_juejin_wangshijun",
+  "version": "0.0.1",
+  "description": "学习掘金小册用npm script 打造超溜的前端工作流",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tools": "node tools",
+    "PV": "npm run tools publicVersion",
+    "ggws": "npm run tools publicVersion ggws",
+    "temp": "npm run tools template",
+    "tempJs": "npm run tools template js",
+    "tempHtml": "npm run tools template html",
+    "excelToJson": "npm run tools excelToJson toJson",
+    "dataDeal": "npm run tools dataDeal excelToJson"
+  },
+  "keywords": [],
+  "author": "IsolatedTraveler <tbydmi@gmail.com> (https://github.com/IsolatedTraveler)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IsolatedTraveler/learn_npm_juejin_wangshijun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IsolatedTraveler/learn_npm_juejin_wangshijun/issues"
+  },
+  "homepage": "https://github.com/IsolatedTraveler/learn_npm_juejin_wangshijun#readme",
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "jsonlint": "^1.6.3",
+    "shelljs": "^0.8.2",
+    "stylelint": "^9.5.0"
+  },
+  "dependencies": {
+    "node-xlsx": "^0.12.1"
+  }
+}

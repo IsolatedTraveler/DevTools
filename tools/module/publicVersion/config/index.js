@@ -1,0 +1,38 @@
+'use strict';
+const config={
+    detail:{
+        desc:"配置详细信息",
+        version:{
+            desc:"显示版本信息"
+        },
+        ggws:{
+            desc:"公卫发版管理"
+        },
+        jwjg:{
+            desc:"基卫监管发版管理"
+        },
+        wtgl:{
+            desc:"服务跟踪系统"
+        },
+        help:{
+            desc:"显示使用方法"
+        },
+        set:{
+            desc:"配置系统信息"
+        },
+        get:{
+            desc:"查看配置信息"
+        }
+    },
+    sum:{
+        desc:"配置信息汇总",
+        command:["ggws","jwjg",'version','wtgl',"set","get"]
+    },
+    simpled:{
+        desc:"命令简写",
+        H:"help"
+    }
+}
+module.exports={
+    config
+}

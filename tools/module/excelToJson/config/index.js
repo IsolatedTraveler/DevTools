@@ -1,0 +1,41 @@
+'use strict';
+const config={
+    detail:{
+        desc:"配置详细信息",
+        version:{
+            desc:"显示版本信息"
+        },
+        help:{
+            desc:"帮助文档"
+        },
+        html:{
+            desc:"html模板解析"
+        },
+        toJson:{
+            desc:"excel 转换成 Array[Object]",
+            params:{
+                inUrl:{
+                    desc:"数据源地址"
+                },
+                position:{
+                    desc:"表格位置,默认值:sheet1"
+                },
+                outUrl:{
+                    desc:"输出数据地址,默认值:C:/Users/wdgw/Desktop/json.text"
+                }
+            }
+        }
+    },
+    sum:{
+        desc:"配置信息汇总",
+        command:['version','help','html','toJson']
+    },
+    simpled:{
+        desc:"命令简写",
+        H:"help",
+        V:"version"
+    }
+}
+module.exports={
+    config
+}
