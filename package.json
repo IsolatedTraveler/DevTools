@@ -1,7 +1,7 @@
 {
-  "name": "learn_npm_juejin_wangshijun",
+  "name": "DevTools",
   "version": "0.0.1",
-  "description": "学习掘金小册用npm script 打造超溜的前端工作流",
+  "description": "个人常用开发工具",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IsolatedTraveler/learn_npm_juejin_wangshijun.git"
+    "url": "git+ssh://git@github.com/IsolatedTraveler/DevTools.git"
   },
   "bugs": {
-    "url": "https://github.com/IsolatedTraveler/learn_npm_juejin_wangshijun/issues"
+    "url": "https://github.com/IsolatedTraveler/DevTools/issues"
   },
-  "homepage": "https://github.com/IsolatedTraveler/learn_npm_juejin_wangshijun#readme",
+  "homepage": "https://github.com/IsolatedTraveler/DevTools#readme",
   "devDependencies": {
     "chalk": "^2.4.1",
     "jsonlint": "^1.6.3",
