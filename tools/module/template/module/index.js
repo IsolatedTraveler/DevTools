@@ -49,26 +49,57 @@ const getStr=(template,data)=>{
     }
     return str;
 }
-const compile = (template,name,params) => {
-    var data=params.shift(),url = params.shift()||template.url,mod = 'template:'+name;
+const getJudge=(template,key,data,name)=>{
+    if(data[0].key){
+        var str='';
+        [].forEach.call(data,item=>{
+            str+=compile(template,name,item,true);
+        });
+        return getStr(template[key].temp,[{temp:str}]);
+    }else{
+        return getStr(template[key].temp,data);
+    }
+};
+const compile = (template,name,params,judge) => {
+    var data='',url ='',mod = 'template:'+name;
+    if(judge){
+        data=params;
+    }else{
+        data=params.shift();
+        url = params.shift()||template.url;
+        try{
+            data=JSON.parse(data);
+        }catch(e){
+            printInfo("数据格式错误",'error');
+        }
+    }
     if(!data){
         seeConfig(template);
         printInfo("缺少必要的模板数据",'error');
     }
     try{
-        data=JSON.parse(data);
         var keys=data.key, str='';
         checkTemplate(template,keys,mod);
         if(typeof keys == 'string'){
-            str=getStr(template[keys].temp,data[keys]||[]);
+            str=getJudge(template,keys,data[keys]||[],name);
         }else{
             [].forEach.call(keys,function(key){
-                str+=getStr(template[key].temp,data[key]||[]);
+                str+=getJudge(template,key,data[key]||[],name);
             });
         }
-        writeFile(url,str);
+        if(judge){
+            return str;
+        }else{
+            str=str.replace(/\n[\t]*(\n)/g,"$1");
+            str=str.replace(/ [a-z]+=['"]{2,2}/g,"");
+            str=str.replace(/ [a-z]+=['"]none['"]/g,"");
+            str=str.replace(/\n[\t]+<td><\/td>/g,"");
+            str=str.replace(/(>[0-9]+)/g,"$1 ");
+            str=str.replace(/>none</g,"><");
+            writeFile(url,str);
+        }
     }catch(e){
-        console.error(e);
+        printInfo("数据格式错误:"+JSON.stringify(data),'error');
     }
 };
 const html = (params)=>{

@@ -3,56 +3,79 @@ const {writeFile} = require('./../../common');
 const getData=()=>{
     const {toJson} = require('./../excelToJson/module');
     return toJson([],true);
-}
-var outUrl='C:/Users/wdgw/Desktop/json.txt';
+};
+const template=(data)=>{
+    const {html,js}=require('./../template/module');
+    html([JSON.stringify({key:"tbody",tbody:data}),outUrl]);
+};
+var outUrl='C:/Users/wdgw/Desktop/json.txt',outUrl1='C:/Users/wdgw/Desktop/json1.txt',outUrl2='C:/Users/wdgw/Desktop/json2.txt';
 const dataDeal = (params)=>{
-    var outData={},idList={},dataList={};
-    var data=getData(params);
-    [].forEach.call(data,item=>{
-        var id=item.id.toLowerCase();
-        item.id=id;
-        idList[id]='';
-        var sm=item.sm||'';
-        var filter=[];
-        if(item.filter.trim()=='NUMBER'){
-            filter.push('number');
-        }
-        if(item.sfbt){
-            filter.push('required');
-        }else if(sm){
-            if(sm.indexOf('必填')!=-1){
-                filter.push('required');
-            }
-        }
-        filter=filter.filter(item=>{
-            return item;
-        });
-        item.filter=filter.join(',');
-        if(sm){
-            if(sm.indexOf('多选')!=-1){
-                dataList[id]=[];
-                item.type='multi'
-            }else if(item.sm.indexOf('字典')!=-1){
-                dataList[id]=[];
-                item.type='list'
+    var data=getData(params),outData=[];
+    [].forEach.call(data,(item,index)=>{
+        // 数据处理
+        // item.index=index;
+        var keys=['a','b','c','d'];
+        var tds=[],tr={key:'td'};
+        [].forEach.call(keys,(key)=>{
+            var val=item[key]||'';
+            val=val.replace(/^[ ]+/,"");
+            val=val.replace(/[ ]{2,}/g,' ');
+            item[key]=val;
+            var td={
+                className:'',
+                colspan:'',
+                rowspan:'none'
+            };
+            if(val){
+                if(key=='a'){
+                    val='<div class="center"><span>'+item[key]+'</span></div>';
+                }else{
+                    val=val.replace(/[ ]*$/,'');
+                    if(val=='none'){
+                        val='<div class="center"><span name="'+item.name+'"></span></div>';
+                    }else{
+                        val+=" ";
+                        var square = val.replace(/^[^□]*/,'');
+                        square = square.replace(/[^□]*&/,'');
+                        val = val.replace(/□\//g,'');
+                        val = val.replace(/□/g,'');
+                        val=val.replace(/[ ]{2,}/g,' ');
+                        val=val.replace(/([\S]+) /g,'<span class="wall" val="$1">$1</span>');
+                        val=val.replace(/(val="[0-9]+)[\.]*/g,"$1-");
+                        val='<div>'+val+'</div>';
+                        square = square.replace(/\//g,'<span class="square none none1"></span>');
+                        square = square.replace(/□/g,'<span class="square" name="'+item.name+'"></span>');
+                        square ='<div>'+ square +'</div>';
+                        val='<div name="'+item.name+'">' + val + square +"</div>";
+                    }
+                }
+                td.content=val;
+                tds.push(td);
             }else{
-                item.type='text'
+                td=tds.pop();
+                if(!td){
+                    return;
+                }
+                var col=Number(td.colspan);
+                if(col){
+                    col++;
+                }else{
+                    col=2;
+                }
+                td.colspan=col;
+                tds.push(td);
             }
-            if(sm.indexOf('为空')!=-1){
-                item.readonly=false
-            }
-        }else{
-            item.type='text'
-        }
-        delete item.sfbt;
+        });
+        tr.td=tds;
+        outData.push({key:'tr',tr:[tr]})
     });
-    outData.formFormat=data;
-    outData.formData=idList;
-    outData.formDataShow=idList;
-    outData.formDataList=dataList;
+    template(outData);
     var str=JSON.stringify(outData,null,'\t');
     str=str.replace(/"([a-zA-D0-9]+)":/g,"$1:");
-    writeFile(outUrl,str);
+    var str1=JSON.stringify(data,null,'\t');
+    str1=str1.replace(/"([a-zA-D0-9]+)":/g,"$1:");
+    writeFile(outUrl2,str1);
+    writeFile(outUrl1,str);
 };
 module.exports={
     dataDeal

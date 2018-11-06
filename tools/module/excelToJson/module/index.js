@@ -7,7 +7,7 @@ const praseExcel = (list,judge)=>{
     for (var j = 1; j < excleData.length ; j++){
         var curData = excleData[j];
         if(curData.length == 0) continue;
-        var item = {index:j-1};
+        var item = {};
         [].forEach.call(keyArray,(key,index)=>{
             item[key]=curData[index];
         })
