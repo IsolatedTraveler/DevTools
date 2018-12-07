@@ -19,12 +19,18 @@ const config={
         },
         dataDeal:{
             desc:'数据处理'
+        },
+        cordova:{
+            desc:"cordova 移动app处理方法"
+        },
+        xml:{
+            desc:"xml类文件解析，编辑，修改，生成等操作"
+        },
+        file:{
+            desc:"常用文件处理操作"
         }
     },
-    sum:{
-        desc:"配置信息汇总",
-        command:["version","help","template","publicVersion","excelToJson","dataDeal"]
-    },
+    sum:["version","help","template","publicVersion","excelToJson","dataDeal","cordova","xml","file"],
     simpled:{
         desc:"命令简写",
         H:"help",

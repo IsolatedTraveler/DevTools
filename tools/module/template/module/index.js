@@ -90,12 +90,9 @@ const compile = (template,name,params,judge) => {
         if(judge){
             return str;
         }else{
-            str=str.replace(/\n[\t]*(\n)/g,"$1");
-            str=str.replace(/ [a-z]+=['"]{2,2}/g,"");
-            str=str.replace(/ [a-z]+=['"]none['"]/g,"");
-            str=str.replace(/\n[\t]+<td><\/td>/g,"");
-            str=str.replace(/(>[0-9]+)/g,"$1 ");
-            str=str.replace(/>none</g,"><");
+            // 去除空值数据
+            str=str.replace(/[, ]+[a-zA-Z\_]+[ ]*[:=]+[ ]*#{[a-zA-Z\_]+}/g,'');
+            str=str.replace(/#{[a-z]+}/g,"");
             writeFile(url,str);
         }
     }catch(e){

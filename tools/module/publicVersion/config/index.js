@@ -24,14 +24,12 @@ const config={
             desc:"查看配置信息"
         }
     },
-    sum:{
-        desc:"配置信息汇总",
-        command:["ggws","jwjg",'version','wtgl',"set","get"]
-    },
+    sum:["ggws","jwjg",'version','wtgl',"set","get",'-H','help'],
     simpled:{
         desc:"命令简写",
         H:"help"
-    }
+    },
+    version:'1.0.0'
 }
 module.exports={
     config

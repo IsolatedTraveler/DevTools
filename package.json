@@ -12,7 +12,10 @@
     "tempJs": "npm run tools template js",
     "tempHtml": "npm run tools template html",
     "excelToJson": "npm run tools excelToJson toJson",
-    "dataDeal": "npm run tools dataDeal excelToJson"
+    "dataDeal": "npm run tools dataDeal excelToJson",
+    "cordova": "npm run tools cordova",
+    "file": "npm run tools file",
+    "xml": "npm run tools xml"
   },
   "keywords": [],
   "author": "IsolatedTraveler <tbydmi@gmail.com> (https://github.com/IsolatedTraveler)",
@@ -32,6 +35,10 @@
     "stylelint": "^9.5.0"
   },
   "dependencies": {
-    "node-xlsx": "^0.12.1"
+    "bluebird": "^3.5.3",
+    "iconv-lite": "^0.4.24",
+    "node-cmd": "^3.0.0",
+    "node-xlsx": "^0.12.1",
+    "xml2js": "^0.4.19"
   }
 }

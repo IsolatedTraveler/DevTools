@@ -15,10 +15,7 @@ const config={
             desc:"js模板解析"
         }
     },
-    sum:{
-        desc:"配置信息汇总",
-        command:['version','help','html','js']
-    },
+    sum:['version','help','html','js'],
     simpled:{
         desc:"命令简写",
         H:"help",

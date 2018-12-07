@@ -1,0 +1,10 @@
+
+> dev_tools@0.0.1 xml D:\Vue\DevTools
+> npm run tools xml "alert" "D:/cordova/ydgw/config.xml" "widget"
+
+
+> dev_tools@0.0.1 tools D:\Vue\DevTools
+> node tools "xml" "alert" "D:/cordova/ydgw/config.xml" "widget"
+
+D:/cordova/ydgw/config.xml widget undefined
+缺少必要的参数！

@@ -3,7 +3,7 @@ const {config} = require ('./config.js');
 const {printInfo,dateDeal,copy,fileFilter,alertConfig,setConfigVal,getConfigVal} = require('./../../../common');
 const path = require("path");
 const setConfig = (name)=>{
-    config[name].mtime=dateDeal(new Date(),'yyyy-MM-dd hh:mm:ss');
+    config[name].mtime=dateDeal(new Date(),'YYYY-MM-DD hh:mm:ss');
     var url = path.join(__dirname,'./config.js');
     alertConfig(url,config);
 };

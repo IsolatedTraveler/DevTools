@@ -1,7 +1,7 @@
 const config = {
 	html:{
 		url:"C:/Users/wdgw/Desktop/json.txt",
-		key:["jwjgBBxxForm","jwjgBBxxForm1","tr","td","tbody"],
+		key:["jwjgBBxxForm","jwjgBBxxForm1","tr","td","tbody","laytd","layth","opt"],
 		jwjgBBxxForm:{
 			desc:"基卫监管公共卫生报表弹出表单模板（填报）"
 			,temp:"\n\t\t\t\t<div class=\"flex row nowrap\">\n\t\t\t\t\t<label class=\"layui-form-label auto\">#{title}</label>\n\t\t\t\t\t<div class=\"input\">\n\t\t\t\t\t\t<input type=\"text\" class=\"layui-input\" name=\"#{id}_1\" id=\"#{id}_1\" placeholder=\"\" readonly/>\n\t\t\t\t\t\t<input type=\"text\" class=\"layui-input\" name=\"#{id}\" id=\"#{id}\" placeholder=\"\"/>\n\t\t\t\t\t</div>\n\t\t\t\t</div>"
@@ -21,6 +21,18 @@ const config = {
 		td:{
 			desc:"table表格列",
 			temp:"<td class='#{className}' colspan='#{colspan}' rowspan='#{rowspan}'>#{content}</td>\n\t\t"
+		},
+		laytd:{
+			desc:"layui.table表格列",
+			temp:"{field: '#{name}', title: '#{title}', width:#{width},rowspan:#{row},colspan:#{col}}\n,"
+		},
+		layth:{
+			desc:"layui.table表格列",
+			temp:"<th lay-data=\"{field:'#{name}', width:#{width}, sort: #{sort}}\">#{title}</th>\n"
+		},
+		opt:{
+			desc:"select option",
+			temp:"<option val=\"#{val}\">#{title}</option>\n"
 		}
 	},
 	js:{

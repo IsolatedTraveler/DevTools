@@ -8,28 +8,20 @@ const config={
         help:{
             desc:"帮助文档"
         },
-        html:{
-            desc:"html模板解析"
-        },
         toJson:{
             desc:"excel 转换成 Array[Object]",
-            params:{
-                inUrl:{
-                    desc:"数据源地址"
-                },
-                position:{
-                    desc:"表格位置,默认值:sheet1"
-                },
-                outUrl:{
-                    desc:"输出数据地址,默认值:C:/Users/wdgw/Desktop/json.text"
-                }
-            }
+            params:[
+                'inUrl',
+                "数据源地址",
+                "position",
+                "表格位置,默认值:sheet1",
+                "outUrl",
+                "输出数据地址,默认值:C:/Users/wdgw/Desktop/json.text"
+            ],
+            order:"inUrl [position] [outUrl]"
         }
     },
-    sum:{
-        desc:"配置信息汇总",
-        command:['version','help','html','toJson']
-    },
+    sum:['version','help','toJson','-H','-V'],
     simpled:{
         desc:"命令简写",
         H:"help",
