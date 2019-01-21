@@ -1,6 +1,7 @@
 'use strict';
 const {config} = require ('./config.js');
 const {printInfo,dateDeal,copy,fileFilter,alertConfig,setConfigVal,getConfigVal} = require('./../../../common');
+const {pub} = require('./../../cordova/module');
 const path = require("path");
 const setConfig = (name)=>{
     config[name].mtime=dateDeal(new Date(),'YYYY-MM-DD hh:mm:ss');
@@ -48,6 +49,11 @@ const set =(params)=>{
     var url = path.join(__dirname,'./config.js');
     setConfigVal(key,val,config,url);
 };
+const ydgw =(params)=>{
+    var judge = params[0]||0;
+    var judge1 = params[1]||0;
+    pub('ydgw',judge,judge1);
+};
 const get=(params)=>{
     var key = params[0];
     getConfigVal(key,config);
@@ -57,5 +63,6 @@ module.exports={
     wtgl,
     jwjg,
     set,
-    get
+    get,
+    ydgw
 };

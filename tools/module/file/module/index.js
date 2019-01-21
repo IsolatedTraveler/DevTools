@@ -133,7 +133,7 @@
                     }); 
                 }
             });
-        });
+        })
     },
     deleteFile=(src)=>{
         return new Promise((resolve,reject)=>{
@@ -200,7 +200,7 @@
                 });
             });
         };
-        copy1(old).then(()=>{
+        return copy1(old).then(()=>{
             printInfo("共拷贝文件:"+sum+"个,文件夹:"+n+"个","info");
         });
     },

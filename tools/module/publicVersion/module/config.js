@@ -14,7 +14,7 @@ const config = {
 	jwjg: {
 		url: "D:/www/jwjg",
 		ignore: ",.svn,",
-		mtime: "2018-12-07 14:47:04",
+		mtime: "2018-12-10 18:06:57",
 		position: "D:/version/jwjg/**/jwjg"
 	}
 };

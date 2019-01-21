@@ -1,8 +1,7 @@
 (function(){
     "use strict";
     const {config} = require ('./config.js');
-    const {printInfo,checkKey,alertConfig,paramDeal,copy} = require('./../../../common');
-    const exec = require('child_process').exec;
+    const {printInfo,checkKey,alertConfig,paramDeal,deleteFiles,copyDir,exeCmd} = require('./../../../common');
     const path = require("path");
     const {alert} = require("./../../xml/module");
     var config1=config,
@@ -10,17 +9,6 @@
         var cmd = ['cd /d "'+config.site+'" && cordova create',config.name,config.url,config.title].join(' ');
         return exeCmd(cmd).then(()=>{
             printInfo("成功创建移动项目:"+config.name,'success');
-        });
-    },
-    exeCmd=(cmd)=>{
-        return new Promise((resolve,reject)=>{
-            exec(cmd,{encoding:"binary"},(e,d,n)=>{
-                if(e){
-                    reject();
-                }else{
-                    resolve();
-                }
-            });
         });
     },
     add=(config,plat,val,judge)=>{
@@ -60,9 +48,8 @@
         });
     },
     build_r=(config,site)=>{
-        site=site||config.site+'/'+config.name;
+        site=site||config.site+'/'+config.name;console.log(site,'12312')
         var cmd=['cd /d','"'+site+'"','&&','cordova build android --release -- --keystore="'+config.keystore+'" --alias='+config.alias+' --storePassword='+config.storePassword+' --password='+config.password].join(' ');
-        console.log(cmd);
         return exeCmd(cmd).then(()=>{
             printInfo("项目:"+config.name+"构建成功",'success');
         }).catch(()=>{
@@ -112,37 +99,49 @@
             });
         });
     },
-    pub=(target,purpose,isbuild,iscopy,isUpdate)=>{
+    copyData=(data,purpose)=>{
+        return new Promise((resolve,reject)=>{
+            let target=data.site+'/'+data.name+'/www',source=data.sourceAddr;
+            deleteFiles(target).then(()=>{
+                copyDir(source,target).then(()=>{
+                    alertVersion(data.name,purpose).then(()=>{
+                        resolve()
+                    })
+                });
+            }).catch(()=>{
+                reject();
+            })
+        });
+    },
+    pub=(target,purpose,judge)=>{
         if(paramDeal(target,true)){
             purpose=target[1];
-            isbuild=target[2];
-            iscopy=target[3];
-            isUpdate=target[4];
+            judge=target[2];
             target=target[0];
         }
-        let data=config[target];
-        if(purpose=='test'){
+        if(purpose=='test'||purpose==0){
             purpose='testversion';
         }else{
             purpose='version';
         }
-        let exe=[];
-        if(!isbuild){
-            exe.push(alertVersion(target,purpose));
-        }
-        if(!iscopy){
-            exe.push(copy(data.sourceAddr,data.site+'/'+data.name+'/www'));
-        }
-        if(!isUpdate){
-            exe.push(alertVersion(target,purpose));
-        }
-        if(exe.length){
-            Promise.all(exe).then(()=>{
-                build_r(data).then(()=>{
-                })
+        return reBuild(target,purpose,judge).then(()=>{
+            return new Promise((resolve,reject)=>{
+                let data = config[target];
+                let url = data.backUpUrl+'/'+data[purpose];
+                let source=data.site+'/'+data.name+'/platforms/android/app/build/outputs/apk/release';
+                copyDir(source,url)
             });
+        })
+    },
+    reBuild=(target,purpose,judge)=>{
+        let data=config[target];
+        if(judge == '1'){
+            return copyData(data,purpose)
+        }else if(judge=='2'){
+            return alertVersion(target,purpose);
         }else{
-            build_r(data).then(()=>{
+            return vueBuild().then(()=>{
+                return copyData(data,purpose);
             })
         }
     },
@@ -165,8 +164,10 @@
             alert(data.site+'/'+data.name+'/config.xml','widget,$,version',version,'',(str)=>{
                 return str.replace(' standalone="yes"','');
             }).then(()=>{
-                console.log("版本修改成功")
-                resolve()
+                printInfo("版本修改成功",'success');
+                build_r(data).then(()=>{
+                    resolve();
+                })
             });
         })
     };

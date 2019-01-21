@@ -1,7 +1,7 @@
 (()=>{
     'use strict';
-    const fs = require("fs");
-    const {copy,mkdir,writeFile,printInfo,paramDeal,fileFilter,readFile} = require("./../module/file/module");
+    const {copy,mkdir,writeFile,printInfo,paramDeal,fileFilter,readFile,deleteFiles,copyDir} = require("./../module/file/module");
+    const exec = require('child_process').exec;
     var checkCommand=(params,config,mod)=>{
         mod=mod||"tools";
         paramDeal(params,true);
@@ -19,27 +19,7 @@
         }
         return command;
     },
-    dateDeal=(time,fmt)=>{
-        fmt=fmt||"YYYYMMDD";
-        var o = { 
-            "M+" : time.getMonth()+1,                 //月份 
-            "D+" : time.getDate(),                    //日 
-            "h+" : time.getHours(),                   //小时 
-            "m+" : time.getMinutes(),                 //分 
-            "s+" : time.getSeconds(),                 //秒 
-            "q+" : Math.floor((time.getMonth()+3)/3), //季度 
-            "S"  : time.getMilliseconds()             //毫秒 
-        }; 
-        if(/(Y+)/.test(fmt)) {
-            fmt=fmt.replace(RegExp.$1, (time.getFullYear()+"").substr(4 - RegExp.$1.length)); 
-        }
-        for(var k in o) {
-            if(new RegExp("("+ k +")").test(fmt)){
-            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
-            }
-        }
-        return fmt; 
-    },
+    
     seeConfig=(config,keys)=>{
         var white='                ';
         keys=keys||config.key;
@@ -111,6 +91,17 @@
             seeConfig(config);
         }
     },
+    exeCmd=(cmd)=>{
+        return new Promise((resolve,reject)=>{
+            exec(cmd,{encoding:"binary"},(e,d,n)=>{
+                if(e){
+                    reject();
+                }else{
+                    resolve();
+                }
+            });
+        });
+    },
     common={
         version(config){
             printInfo(config.version,'success');
@@ -148,6 +139,9 @@
         seeConfig,
         paramDeal,
         readFile,
-        checkKey
+        checkKey,
+        exeCmd,
+        deleteFiles,
+        copyDir
     };
 })();

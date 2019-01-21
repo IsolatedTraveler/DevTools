@@ -14,6 +14,9 @@ const config={
         wtgl:{
             desc:"服务跟踪系统"
         },
+        ydgw:{
+            desc:"移动公卫版本发布"
+        },
         help:{
             desc:"显示使用方法"
         },
@@ -24,7 +27,7 @@ const config={
             desc:"查看配置信息"
         }
     },
-    sum:["ggws","jwjg",'version','wtgl',"set","get",'-H','help'],
+    sum:["ggws","jwjg",'version','wtgl',"set","get",'ydgw','-H','help'],
     simpled:{
         desc:"命令简写",
         H:"help"
