@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tools": "node tools",
+    "tools": "node index.js",
     "PV": "npm run tools publicVersion",
     "ggws": "npm run tools publicVersion ggws",
     "temp": "npm run tools template",
@@ -29,14 +29,17 @@
   },
   "homepage": "https://github.com/IsolatedTraveler/DevTools#readme",
   "devDependencies": {
-    "chalk": "^2.4.1",
+    "chalk": "^2.4.2",
     "jsonlint": "^1.6.3",
     "shelljs": "^0.8.2",
     "stylelint": "^9.5.0"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
+    "commander": "^2.19.0",
+    "csv": "^5.1.1",
     "iconv-lite": "^0.4.24",
+    "inquirer": "^6.2.2",
     "node-cmd": "^3.0.0",
     "node-xlsx": "^0.12.1",
     "xml2js": "^0.4.19"
