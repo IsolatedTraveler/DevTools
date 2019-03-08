@@ -2,7 +2,7 @@
 
 ## 介绍
 
-开发过程中，自定义的快速开发技巧，常用代码积累，实用小程序等
+开发过程中，自定义的快速开发技巧，常用代码积累，实用小程序等等
 
 ## [开发文档](./blog/blob/master/note/webDev/custom_tool/doc/index.MarkDown)
 
