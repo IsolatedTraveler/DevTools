@@ -11,8 +11,7 @@
     "temp": "npm run tools template",
     "tempJs": "npm run tools template js",
     "tempHtml": "npm run tools template html",
-    "excelToJson": "npm run tools excelToJson toJson",
-    "dataDeal": "npm run tools dataDeal excelToJson",
+    "dataDeal": "npm run tools dataDeal",
     "cordova": "npm run tools cordova",
     "file": "npm run tools file",
     "xml": "npm run tools xml"

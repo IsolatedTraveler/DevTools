@@ -27,24 +27,41 @@
   };
   const commandExe = (params,res,url) => {
     try {
-      var exe = require(url+res);
+      var exe = require(url+res+'/'+res);
       params.shift()
       try{
-        exe[params.shift()||'default'](params)
+        exe[getParam(params, 1) || 'default'](params)
       }catch(e){
         commandError(config[res])
       }
     }catch(e){
-      urlError(url+res)
+      urlError(url+res+'/'+res)
     }
   }
-  const resultDeal = (res) => {
-    let data = res.data, params = res.params
-    if(params.length){
-
-    }else{
-      msg('当前命令编译成功',3)
+  const getParam = (params, judge) => {
+    var data = [], temp = params[0]
+    if(temp){
+      if(temp[0] == '[') {
+        if(judge == 1) {
+          data = ''
+        }else {
+          data = JSON.parse(params.shift())
+        }
+      }else{
+        if(judge==1){
+          data = params.shift()
+        }
+      }
+    } else if (judge == 1 ){
+      data = ''
     }
+    console.log(data)
+    return data
+  }
+  const resultDeal = (res, command) => {
+    res=res || {}
+    msg(command + '命令编译成功',3)
+    return res.data
   }
   const help = (config) => {
     msg('展示命令详情',2);
@@ -64,6 +81,7 @@
     msg,
     commandExe,
     resultDeal,
+    getParam,
     help
   }
 })()
