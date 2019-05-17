@@ -2,9 +2,10 @@
   "name": "dev-tools",
   "version": "0.0.1",
   "description": "自定义快速开发工具",
+  "?main": "在未指定文件夹中具体文件时的默认加载项",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/IsolatedTraveler/DevTools/issues"
   },
-  "homepage": "https://github.com/IsolatedTraveler/DevTools#readme"
+  "homepage": "https://github.com/IsolatedTraveler/DevTools#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
 }
