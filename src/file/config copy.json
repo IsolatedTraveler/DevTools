@@ -1,0 +1,178 @@
+{
+  "yyxt": {
+    "ml": "E:/jtGit/web/yyxt",
+    "name": "yyxt",
+    "mtime": 1629775870079,
+    "cq-mtime": 1625025506366,
+    "sfys": true,
+    "filter": [
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project",
+      "public/data/",
+      "package.json",
+      ".gitmodules",
+      ".git",
+      ".git/"
+    ]
+  },
+  "zndz": {
+    "ml": "E:/jtGit/web/zndz",
+    "name": "zndz",
+    "mtime": 1629423484452,
+    "sfys": false,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project",
+      "db/",
+      "lib21/",
+      "public21/",
+      "web/web21/"
+    ]
+  },
+  "zndz21": {
+    "ml": "E:/jtGit/web/zndz",
+    "name": "zndz",
+    "mtime": 1629692856329,
+    "sfys": true,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project",
+      "db/",
+      "lib/",
+      "public/",
+      "zyscfile/",
+      "web/auth/",
+      "web/cgzxgl/",
+      "web/draggabilly/",
+      "web/fzglxt/",
+      "web/gzhyywglxt/",
+      "web/hyglxt/",
+      "web/index/",
+      "web/index_v0/",
+      "web/jclbjcyygl/",
+      "web/jcsjgl/",
+      "web/jcyygl/",
+      "web/jyfzxt/",
+      "web/login/",
+      "web/login_v0/",
+      "web/mjglxt/",
+      "web/myddcxt/",
+      "web/pgwjxt/",
+      "web/scglxt/",
+      "web/tjfxxt/",
+      "web/tyyygl/",
+      "web/xxtsgl/",
+      "web/xxtsglxt/",
+      "web/yydhgl/",
+      "web/zdglxt/",
+      "web/znjzgl/",
+      "web/zzbdj/",
+      "index.html"
+    ]
+  },
+  "amis": {
+    "ml": "D:/www/OEM/amis",
+    "name": "amis",
+    "mtime": 1607671417214,
+    "sfys": true,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project"
+    ]
+  },
+  "Prod_PhisCommon": {
+    "ml": "D:/www/Prod_PhisCommon",
+    "name": "Prod_PhisCommon",
+    "mtime": 1614153606917,
+    "sfys": false,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project"
+    ]
+  },
+  "guide": {
+    "ml": "D:/www/guide",
+    "name": "guide",
+    "mtime": 1616726874837,
+    "versionFile": "D:/www/guide1",
+    "sfys": true,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project"
+    ]
+  },
+  "mydtc": {
+    "ml": "E:/svn/web/mydtc",
+    "name": "mydtc",
+    "mtime": 0,
+    "sfys": true,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project"
+    ]
+  },
+  "cloudapp": {
+    "ml": "E:/svn/web/cloudapp",
+    "name": "cloudapp",
+    "mtime": 1621518430957,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project"
+    ]
+  },
+  "demo": {
+    "ml": "E:/jtGit/web/demo",
+    "name": "demo",
+    "mtime": 1623054115750,
+    "sfys": true,
+    "filter": [
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project",
+      "public/data/",
+      "package.json",
+      ".gitmodules",
+      ".git",
+      ".*.svn/",
+      ".git/"
+    ]
+  },
+  "ggws": {
+    "ml": "E:/svn/web/OEM/ggws",
+    "name": "ggws",
+    "mtime": 1627976381336,
+    "sfys-mtime": 1625712175437,
+    "sfys": false,
+    "filter": [
+      ".*.git/",
+      ".vscode/",
+      ".eslintignore",
+      ".eslintrc.js",
+      ".project"
+    ]
+  }
+}

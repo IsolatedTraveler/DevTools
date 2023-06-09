@@ -1,46 +1,44 @@
 {
-  "name": "dev_tools",
+  "name": "devtools",
   "version": "0.0.1",
-  "description": "个人常用开发工具",
+  "description": "自定义快速开发工具",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tools": "node index.js",
-    "PV": "npm run tools publicVersion",
-    "ggws": "npm run tools publicVersion ggws",
-    "temp": "npm run tools template",
-    "tempJs": "npm run tools template js",
-    "tempHtml": "npm run tools template html",
-    "dataDeal": "npm run tools dataDeal",
-    "cordova": "npm run tools cordova",
-    "file": "npm run tools file",
-    "xml": "npm run tools xml"
+    "dev": "node index.js",
+    "pv": "node src/publicVersion/index.js",
+    "cs": "uglifyjs cs.js -m -c -o min.js"
   },
-  "keywords": [],
-  "author": "IsolatedTraveler <tbydmi@gmail.com> (https://github.com/IsolatedTraveler)",
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/IsolatedTraveler/DevTools.git"
+    "url": "git+https://github.com/IsolatedTraveler/DevTools.git"
   },
+  "author": "IsolatedTraveler <tbydmi@gmail.com> (https://github.com/IsolatedTraveler)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/IsolatedTraveler/DevTools/issues"
   },
   "homepage": "https://github.com/IsolatedTraveler/DevTools#readme",
   "devDependencies": {
-    "chalk": "^2.4.2",
-    "jsonlint": "^1.6.3",
-    "shelljs": "^0.8.2",
-    "stylelint": "^9.5.0"
+    "@babel/core": "^7.13.1",
+    "@babel/plugin-external-helpers": "^7.16.0",
+    "@babel/plugin-transform-object-assign": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/runtime-corejs3": "^7.14.9",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-runtime": "^6.26.0",
+    "browserify": "^17.0.0",
+    "html-minifier": "^4.0.0",
+    "inquirer": "^7.3.3",
+    "node-xlsx": "^0.16.1",
+    "uglify-js": "^3.12.5"
   },
   "dependencies": {
-    "bluebird": "^3.5.3",
-    "commander": "^2.19.0",
-    "csv": "^5.1.1",
-    "iconv-lite": "^0.4.24",
-    "inquirer": "^6.2.2",
-    "node-cmd": "^3.0.0",
-    "node-xlsx": "^0.12.1",
-    "xml2js": "^0.4.19"
+    "async": "^3.2.1",
+    "core-js": "^3.21.1",
+    "jquery": "^3.6.0",
+    "js-base64": "^3.7.5",
+    "jsdom": "^18.1.0"
   }
 }

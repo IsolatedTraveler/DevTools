@@ -1,0 +1,33 @@
+module.exports = {
+  "isTrue":[
+    {
+      "label":"不限",
+      "value":""
+    },
+    {
+      "label":"是",
+      "value":"1"
+    },
+    {
+      "label":"否",
+      "value":"0"
+    }],
+  "zxzt":[
+    {
+      "label":"不限",
+      "value":""
+    },
+    {
+      "label":"未执行",
+      "value":"0"
+    },
+    {
+      "label":"执行中",
+      "value":"1"
+    },
+    {
+      "label":"已执行",
+      "value":"2"
+    }],
+    "sfjhdm": "1"
+}

@@ -1,0 +1,115 @@
+{
+  "zshis": {
+    "ml": "E:/jtGit/web/zshis",
+    "name": "zshis",
+    "mtime": 1686303360260,
+    "sfys-mtime": 0,
+    "sfys": true,
+    "ysnr": [
+      "lib/css/",
+      "lib/js/layui-v2.5.7/extend/",
+      "lib/js/modules/",
+      "lib/js/commonUtil.js",
+      "public/js/",
+      "index.html",
+      "index.js",
+      "webs/"
+    ],
+    "notYsnr": [
+      ".*\\.min\\.js",
+      "webs/wcgl/wcywgl/wckcgl/",
+      "webs/wcgl/wcywgl/wcpdgl/",
+      "webs/xtjc/xtxxgl/ymgngl/",
+      "webs/ypgl/ypywgl/cffygl/",
+      "webs/ypgl/ypywgl/ypkcgl/",
+      "webs/ypgl/ypywgl/yppdgl/",
+      "webs/ywjc/cwjcgl/",
+      "webs/ywjc/wcjcgl/wcxmgl/",
+      "webs/ywjc/ypjcgl/gysgl/",
+      "webs/ywzd/tyzdgl/ywtyzd/"
+    ]
+  },
+  "yyxt": {
+    "ml": "E:/jtGit/web/yyxt",
+    "name": "yyxt",
+    "mtime": 1658731839661,
+    "cq-mtime": 1625025506366,
+    "sfys": true
+  },
+  "demo": {
+    "ml": "E:/jtGit/web/demo",
+    "name": "demo",
+    "mtime": 1656065214770,
+    "sfys": true,
+    "notYsnr": [
+      ".*min.js$",
+      ".*sha256.js$",
+      ".*jrx.js$",
+      ".*layui.all.js$",
+      ".*layui.js$",
+      ".*md5.js$",
+      ".*pinyin.js$",
+      ".*encryption/"
+    ]
+  },
+  "his": {
+    "ml": "E:/jtGit/web/his-flie/heban",
+    "name": "heban",
+    "mtime": 1686023107981,
+    "sfys-mtime": 1685030400000,
+    "sfys": true,
+    "ysnr": [
+      "lib21/css/",
+      "lib21/js/layui-v2.5.7/extend/",
+      "lib21/js/modules/",
+      "lib21/js/commonUtil.js",
+      "public21/js/",
+      "index.html",
+      "index.js",
+      "webs/web21/"
+    ],
+    "notYsnr": [
+      ".*\\.min\\.js"
+    ]
+  },
+  "glgw": {
+    "ml": "E:/jtGit/web/gwgw/app",
+    "name": "glgw",
+    "mtime": 1660647025283,
+    "sfys-mtime": 1659405344313,
+    "sfys": true,
+    "ysnr": [
+      "lib21/",
+      "webs/",
+      "public21/",
+      "[^\\/]*.js",
+      "[^\\/]*.html"
+    ],
+    "notYsnr": [
+      ".*\\.min\\.js",
+      "lib21/encryption/",
+      "lib21/jquery/",
+      "lib21/jrx/",
+      "lib21/print/",
+      "lib21/xlsx/",
+      "lib21/zTree/",
+      "webs/ggws2/",
+      "webs/cyywgl/",
+      "webs/fjzl/",
+      "webs/jcsjgl/",
+      "webs/login/",
+      "webs/main/",
+      "webs/mzysgzz/",
+      "webs/pdf/",
+      "webs/qcqygl/",
+      "webs/wcgl/",
+      "webs/yjglxt/",
+      "webs/ylglxt/",
+      "webs/yltfwpt/",
+      "webs/yggl/",
+      "webs/yntzhgl/",
+      "webs/zyysgzz/",
+      "webs/ggws/"
+    ]
+  }
+}
