@@ -25,8 +25,8 @@ function toJson() {
     })
     var date = 'yyyy/mm/dd'
     var sjlx = {
-      date: {rysj: date, cysj: date, csrq: date, cjsj: date},
-      base64: {tjjg: ['id']}
+      date: { rysj: date, cysj: date, csrq: date, cjsj: date },
+      base64: { tjjg: ['id'] }
     }
     keys = ['id', 'sfzh', 'zlh', 'tdh', 'rysj', 'cysj', 'xm', 'xb', 'csrq', 'tjjg', 'cjsj']
     var obj = {
