@@ -104,8 +104,20 @@ function setData(data) {
     filter = projectNmae + '/(' + filter.join('|') + ')'
     filter = new RegExp(filter)
   }
-  ysnr = data.ysnr
-  notYsnr = data.notYsnr
+  ysnr = data.ysnr || [
+    "lib23/css/",
+    "lib23/js/layui-v2.5.7/extend/",
+    "lib23/js/modules/",
+    "lib23/js/commonUtil.js",
+    "public23/js/",
+    "index.html",
+    "index.js",
+    "webs/tymb/",
+    "webs/mtysz/zybl/"
+  ]
+  notYsnr = data.notYsnr || [
+    ".*\\.min\\.js"
+  ]
   if (ysnr && ysnr) {
     ysnr = projectNmae + '/(' + ysnr.join('|') + ')'
     ysnr = new RegExp(ysnr)

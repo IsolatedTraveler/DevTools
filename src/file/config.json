@@ -2,114 +2,43 @@
   "zshis": {
     "ml": "E:/jtGit/web/zshis",
     "name": "zshis",
-    "mtime": 1694398872773,
-    "sfys-mtime": 0,
-    "sfys": true,
-    "ysnr": [
-      "lib/css/",
-      "lib/js/layui-v2.5.7/extend/",
-      "lib/js/modules/",
-      "lib/js/commonUtil.js",
-      "public/js/",
-      "index.html",
-      "index.js",
-      "webs/"
-    ],
-    "notYsnr": [
-      ".*\\.min\\.js",
-      "webs/wcgl/wcywgl/wckcgl/",
-      "webs/wcgl/wcywgl/wcpdgl/",
-      "webs/xtjc/xtxxgl/ymgngl/",
-      "webs/ypgl/ypywgl/cffygl/",
-      "webs/ypgl/ypywgl/ypkcgl/",
-      "webs/ypgl/ypywgl/yppdgl/",
-      "webs/ywjc/cwjcgl/",
-      "webs/ywjc/wcjcgl/wcxmgl/",
-      "webs/ywjc/ypjcgl/gysgl/",
-      "webs/ywzd/tyzdgl/ywtyzd/"
-    ]
+    "mtime": 1701245333429,
+    "sfys-mtime": 0
   },
-  "yyxt": {
-    "ml": "E:/jtGit/web/yyxt",
-    "name": "yyxt",
-    "mtime": 1658731839661,
-    "cq-mtime": 1625025506366,
-    "sfys": true
+  "nm": {
+    "ml": "E:/jtGit/web/his-flie/nmhis",
+    "name": "nmhis",
+    "mtime": 1710389647585,
+    "cq-mtime": 1625025506366
   },
-  "demo": {
-    "ml": "E:/jtGit/web/demo",
-    "name": "demo",
-    "mtime": 1656065214770,
-    "sfys": true,
-    "notYsnr": [
-      ".*min.js$",
-      ".*sha256.js$",
-      ".*jrx.js$",
-      ".*layui.all.js$",
-      ".*layui.js$",
-      ".*md5.js$",
-      ".*pinyin.js$",
-      ".*encryption/"
-    ]
+  "yhis": {
+    "ml": "E:/jtGit/web/his-flie/yhis",
+    "name": "yhis",
+    "mtime": 1708399033332,
+    "cq-mtime": 1625025506366
   },
-  "his": {
-    "ml": "E:/jtGit/web/his-flie/heban",
-    "name": "heban",
-    "mtime": 1688545754156,
-    "sfys-mtime": 1685030400000,
-    "sfys": true,
-    "ysnr": [
-      "lib21/css/",
-      "lib21/js/layui-v2.5.7/extend/",
-      "lib21/js/modules/",
-      "lib21/js/commonUtil.js",
-      "public21/js/",
-      "index.html",
-      "index.js",
-      "webs/web21/"
-    ],
-    "notYsnr": [
-      ".*\\.min\\.js"
-    ]
+  "reversion": {
+    "ml": "E:/jtGit/web/his-flie/reversion",
+    "name": "reversion",
+    "mtime": 1708334273279,
+    "cq-mtime": 1625025506366
   },
-  "glgw": {
-    "ml": "E:/jtGit/web/gwgw/app",
-    "name": "glgw",
-    "mtime": 1660647025283,
-    "sfys-mtime": 1659405344313,
-    "sfys": true,
-    "ysnr": [
-      "lib21/",
-      "webs/",
-      "public21/",
-      "[^\\/]*.js",
-      "[^\\/]*.html"
-    ],
-    "notYsnr": [
-      ".*\\.min\\.js",
-      "lib21/encryption/",
-      "lib21/jquery/",
-      "lib21/jrx/",
-      "lib21/print/",
-      "lib21/xlsx/",
-      "lib21/zTree/",
-      "webs/ggws2/",
-      "webs/cyywgl/",
-      "webs/fjzl/",
-      "webs/jcsjgl/",
-      "webs/login/",
-      "webs/main/",
-      "webs/mzysgzz/",
-      "webs/pdf/",
-      "webs/qcqygl/",
-      "webs/wcgl/",
-      "webs/yjglxt/",
-      "webs/ylglxt/",
-      "webs/yltfwpt/",
-      "webs/yggl/",
-      "webs/yntzhgl/",
-      "webs/zyysgzz/",
-      "webs/ggws/"
-    ]
+  "bxhis": {
+    "ml": "E:/jtGit/web/his-flie/bxhis",
+    "name": "bxhis",
+    "mtime": 1706499297444,
+    "cq-mtime": 1625025506366
+  },
+  "yq": {
+    "ml": "E:/jtGit/web/his-flie/yq",
+    "name": "yq",
+    "mtime": 1704854286646,
+    "cq-mtime": 1625025506366
+  },
+  "gl": {
+    "ml": "E:/jtGit/web/his-flie/gl",
+    "name": "gl",
+    "mtime": 1702366876032,
+    "cq-mtime": 1625025506366
   }
 }
